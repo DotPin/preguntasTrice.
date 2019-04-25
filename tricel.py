@@ -6,14 +6,14 @@ import csv
 c=[]
 
 def load():
-    global c
+    
     with open("preguntas.csv","r") as a:
         for x in a:
             c.append(x.split(":"))	#genera una tupla de elementos, con subtuplas de elementos
     
 
 def pregunta(nm):
-    global c
+    
     a = c[nm-1]
     if (c[nm-1]):
         print("Pregunta {0}: '{1}'".format(a[0],a[1]))
